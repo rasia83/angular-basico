@@ -6,36 +6,6 @@
 
 [Playlist](https://www.youtube.com/playlist?list=PLWXw8Gu52TRKj3tFWHlkheh8rLQRqQ1__)
 
-Conteúdos abordados nas 39 primeiras aulas:
-
-- Introdução ao Angular
-- Configurar ambiente
-- Criar componentes
-- Diretivas
-- Property biding
-- Event biding
-- Built-in control flow
-- Configurar o Bootstrap
-- FormsModule
-- Reactive Forms
-- Validators
-- Projeto prático.
-
-Conteúdos exclusivos (38 aulas extras):
-
-- Implementar serviços
-- Comunicação entre componentes
-- Configurar o Angular Material
-- Realizando requisições com APIs
-- Criando uma API falsa através do Node.js
-- Introdução ao RxJS
-- Pipes
-- Rotas
-- Testes unitários
-- Deploy
-- x
-- z
-
 | Conteúdos abordados nas 39 primeiras aulas  | Conteúdos exclusivos (38 aulas extras)             |
 |---------------------------------------------|------------------------------------------------------|
 | - Introdução ao Angular                     | - Implementar serviços                               |
