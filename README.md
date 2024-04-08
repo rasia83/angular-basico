@@ -157,10 +157,34 @@ Importar o `FormsModule`.
 
 [20 - Reactive Forms](https://ralflima.com/treinamentos/angular17/20reactive_forms.php)  
 
+adicionar o formulário no typescript e conferir os imports.
 
+`import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';`
+
+```ts
+  formulario = new FormGroup({
+    nome : new FormControl(''),
+    cidade : new FormControl('')
+  });
+```
+
+```HTML
+<form [formGroup]="formulario">
+  <p><label for="nome">Nome:</label>
+  <input type="text" id="nome" formControlName="nome" placeholder="Nome"></p>
+  <p><label for="cidade">Cidade:</label>
+  <input type="text" id="cidade" formControlName="cidade" placeholder="Cidade"></p>
+</form>
+
+<p>Nome: {{formulario.value.nome}}</p>
+<p>Cidade: {{formulario.value.cidade}}</p>
+```
 
 [21 - Apresentação do projeto](https://ralflima.com/treinamentos/angular17/21projeto_apresentacao.php)  
 [22 - Criar componente do projeto](https://ralflima.com/treinamentos/angular17/22criar_componente_projeto.php)  
+
+
+
 [23 - Strictnullchecks](https://ralflima.com/treinamentos/angular17/23stricktnullchecks.php)  
 [24 - Criar formulário](https://ralflima.com/treinamentos/angular17/24criar_formulario.php)  
 [25 - Criar tabela](https://ralflima.com/treinamentos/angular17/25criar_tabela.php)  
