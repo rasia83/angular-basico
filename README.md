@@ -129,15 +129,36 @@ Adiciona classes CSS em um elemento HTML.
 
 [17 - Bootstrap](https://ralflima.com/treinamentos/angular17/17bootstrap.php)  
 
-`npm i bootstrap@5.3.2`
-Abrir o arquivo angular.json e adicionar os arquivos CSS e JavaScript do Bootstrap.
-"node_modules/bootstrap/dist/css/bootstrap.min.css"
-"node_modules/bootstrap/dist/js/bootstrap.min.js"
-[Bootstrap - docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+`npm i bootstrap@5.3.2`  
+Abrir o arquivo angular.json e adicionar os arquivos CSS e JavaScript do Bootstrap.  
+"node_modules/bootstrap/dist/css/bootstrap.min.css"  
+"node_modules/bootstrap/dist/js/bootstrap.min.js"  
+[Bootstrap - docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)  
 
 [18 - FormsModule (parte 1)](https://ralflima.com/treinamentos/angular17/18formsmodule_parte1.php)  
+
+Importar o `FormsModule`.
+```HTML
+<h1>{{nome}}</h1>
+<input type="text" [(ngModel)]="nome">
+```
+
 [19 - FormsModule (parte 2)](https://ralflima.com/treinamentos/angular17/19formsmodule_parte2.php)  
+
+```HTML
+<h1>{{nome}}</h1>
+<h2>{{cidade}}</h2>
+
+<form>  <!-- usar name="" para identificar no caso de múltiplos campos -->
+  <input type="text" name="nome" [(ngModel)]="nome" placeholder="nome">
+  <input type="text" name="cidade" [(ngModel)]="cidade" placeholder="cidade">
+</form>
+```
+
 [20 - Reactive Forms](https://ralflima.com/treinamentos/angular17/20reactive_forms.php)  
+
+
+
 [21 - Apresentação do projeto](https://ralflima.com/treinamentos/angular17/21projeto_apresentacao.php)  
 [22 - Criar componente do projeto](https://ralflima.com/treinamentos/angular17/22criar_componente_projeto.php)  
 [23 - Strictnullchecks](https://ralflima.com/treinamentos/angular17/23stricktnullchecks.php)  
