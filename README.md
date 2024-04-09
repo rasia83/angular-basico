@@ -201,8 +201,63 @@ criar os 3 inputs, 4 botões e formatação no CSS.
 `<form [formGroup]="formulario">` e nos campos `formControlName="nome"`
 
 [27 - Validators](https://ralflima.com/treinamentos/angular17/27validators.php)  
+
+```js
+  formulario = new FormGroup({
+    nome : new FormControl('', [Validators.required, Validators.minLength(3)]),
+    idade : new FormControl(null, [Validators.required, Validators.min(0), Validators.max(120)]),
+    cidade : new FormControl('', [Validators.required, Validators.minLength(3)])
+  })
+```
+
 [28 - Criar modelo de pessoa](https://ralflima.com/treinamentos/angular17/28modelo_pessoa.php)  
+
+`src\app\modelo\Pessoa.ts`
+
+```js
+export class Pessoa
+{
+  nome:string;
+  idade:number;
+  cidade:string;
+}
+```
+
 [29 - Mensagens de validação](https://ralflima.com/treinamentos/angular17/29mensagens_validacao.php)  
+
+```HTML
+<form [formGroup]="formulario">
+  <!-- nome -->
+  @if (formulario.get('nome').hasError('required') && formulario.get('nome').touched ) {
+    <p class="alert alert-warning">O campo Nome é obrigatório!</p>
+  }
+  @if (formulario.get('nome').hasError('minlength') && formulario.get('nome').touched ) {
+    <p class="alert alert-light">O campo Nome precisa ter pelo menos três caracteres.</p>
+  }
+  <input type="text"    formControlName="nome"    placeholder="Nome" class="form-control">
+
+  <!-- idade -->
+  @if (formulario.get('idade').hasError('required') && formulario.get('idade').touched ) {
+    <p class="alert alert-warning">O campo Idade é obrigatório!</p>
+  }
+  @if (formulario.get('idade').hasError('min') && formulario.get('idade').touched ) {
+    <p class="alert alert-light">O campo Idade não aceita números inferiores a 0.</p>
+  }
+  @if (formulario.get('idade').hasError('max') && formulario.get('idade').touched ) {
+    <p class="alert alert-light">O campo Idade não aceita números superiores a 120.</p>
+  }
+  <input type="number"  formControlName="idade"   placeholder="Idade" class="form-control">
+
+  <!-- cidade -->
+  @if (formulario.get('cidade').hasError('required') && formulario.get('cidade').touched ) {
+    <p class="alert alert-warning">O campo Cidade é obrigatório!</p>
+  }
+  @if (formulario.get('cidade').hasError('minlength') && formulario.get('cidade').touched ) {
+    <p class="alert alert-light">O campo Cidade precisa ter pelo menos três caracteres.</p>
+  }
+  <input type="text"    formControlName="cidade"  placeholder="Cidade" class="form-control">
+```
+
 [30 - Propriedade disabled](https://ralflima.com/treinamentos/angular17/30propriedade_disabled.php)  
 [31 - Visilidade de botões](https://ralflima.com/treinamentos/angular17/31visibilidade_botoes.php)  
 [32 - Criar vetor](https://ralflima.com/treinamentos/angular17/32criar_vetor.php)  
