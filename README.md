@@ -182,13 +182,24 @@ adicionar o formulário no typescript e conferir os imports.
 
 [21 - Apresentação do projeto](https://ralflima.com/treinamentos/angular17/21projeto_apresentacao.php)  
 [22 - Criar componente do projeto](https://ralflima.com/treinamentos/angular17/22criar_componente_projeto.php)  
-
-
-
 [23 - Strictnullchecks](https://ralflima.com/treinamentos/angular17/23stricktnullchecks.php)  
+
+para o TypeScript aceitar variáveis não iniciadas:
+editar o arquivo `tsconfig.json`
+> adicionar no inicio de `compilerOptions`
+> > `"strictNullChecks": false,`
+
 [24 - Criar formulário](https://ralflima.com/treinamentos/angular17/24criar_formulario.php)  
+
+criar os 3 inputs, 4 botões e formatação no CSS.
+
 [25 - Criar tabela](https://ralflima.com/treinamentos/angular17/25criar_tabela.php)  
 [26 - Implementar formulário reativo](https://ralflima.com/treinamentos/angular17/26formulario_reativo.php)  
+
+`imports: [ReactiveFormsModule],`
+
+`<form [formGroup]="formulario">` e nos campos `formControlName="nome"`
+
 [27 - Validators](https://ralflima.com/treinamentos/angular17/27validators.php)  
 [28 - Criar modelo de pessoa](https://ralflima.com/treinamentos/angular17/28modelo_pessoa.php)  
 [29 - Mensagens de validação](https://ralflima.com/treinamentos/angular17/29mensagens_validacao.php)  
