@@ -275,10 +275,35 @@ export class Pessoa
     ">
 ```
 
-[31 - Visilidade de botões](https://ralflima.com/treinamentos/angular17/31visibilidade_botoes.php)  
+[31 - Visibilidade de botões](https://ralflima.com/treinamentos/angular17/31visibilidade_botoes.php)  
 [32 - Criar vetor](https://ralflima.com/treinamentos/angular17/32criar_vetor.php)  
 [33 - Função de cadastro](https://ralflima.com/treinamentos/angular17/33cadastro.php)  
+
+```HTML
+<input type="button" value="Cadastrar" (click)="cadastrar()" class="btn btn-primary" ...
+```
+
+```js
+  cadastrar(){
+    this.vetor.push(this.formulario.value as Pessoa);
+    this.formulario.reset();
+  }
+```
+
 [34 - Função de listagem](https://ralflima.com/treinamentos/angular17/34listagem.php)  
+
+```HTML
+<tbody>
+  <tr *ngFor="let v of vetor; index as i">
+    <td>{{i}}</td>
+    <td>{{v.nome}}</td>
+    <td>{{v.idade}}</td>
+    <td>{{v.cidade}}</td>
+    <td><button class="btn btn-primary">Selecionar</button></td>
+  </tr>
+</tbody>
+```
+
 [35 - Função de seleção](https://ralflima.com/treinamentos/angular17/35selecao.php)  
 [36 - Função de alteração](https://ralflima.com/treinamentos/angular17/36alterar.php)  
 [37 - Função de remoção](https://ralflima.com/treinamentos/angular17/37remover.php)  
