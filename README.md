@@ -259,6 +259,22 @@ export class Pessoa
 ```
 
 [30 - Propriedade disabled](https://ralflima.com/treinamentos/angular17/30propriedade_disabled.php)  
+
+```HTML
+<input type="button" value="Cadastrar" class="btn btn-primary" 
+    [disabled]="
+      formulario.get('nome').getError('required') || 
+      formulario.get('nome').getError('minlength') ||
+
+      formulario.get('idade').getError('required') || 
+      formulario.get('idade').getError('min') ||
+      formulario.get('idade').getError('max') ||
+      
+      formulario.get('cidade').getError('required') || 
+      formulario.get('cidade').getError('minlength')
+    ">
+```
+
 [31 - Visilidade de botões](https://ralflima.com/treinamentos/angular17/31visibilidade_botoes.php)  
 [32 - Criar vetor](https://ralflima.com/treinamentos/angular17/32criar_vetor.php)  
 [33 - Função de cadastro](https://ralflima.com/treinamentos/angular17/33cadastro.php)  

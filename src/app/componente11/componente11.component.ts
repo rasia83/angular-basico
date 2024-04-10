@@ -15,4 +15,8 @@ export class Componente11Component {
     idade : new FormControl(null, [Validators.required, Validators.min(0), Validators.max(120)]),
     cidade : new FormControl('', [Validators.required, Validators.minLength(3)])
   })
+
+  // visibilidade
+  btnCadastrar:boolean = true;
+
 }
