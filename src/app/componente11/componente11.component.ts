@@ -24,18 +24,35 @@ export class Componente11Component {
   // vetor
   vetor:Pessoa[] = [];
 
+  indice:number = -1;
+
   // função de cadastro
   cadastrar(){
-    // cadastro no vetor
     this.vetor.push(this.formulario.value as Pessoa);
-
-    // limpeza dos inputs
     this.formulario.reset();
-
-    // visualização via console
-    console.table(this.vetor);
-
   }
 
+  selecionar(indice:number){
+
+    this.indice = indice;
+
+    this.formulario.setValue({
+      nome : this.vetor[indice].nome,
+      idade : this.vetor[indice].idade,
+      cidade : this.vetor[indice].cidade
+    });
+
+    this.btnCadastrar = false;
+  }
+
+  alterar(){
+
+    this.vetor[this.indice] = this.formulario.value as Pessoa;
+
+    this.formulario.reset();
+
+    this.btnCadastrar = true;
+
+  }
 
 }

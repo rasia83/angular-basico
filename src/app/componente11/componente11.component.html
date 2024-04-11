@@ -43,7 +43,7 @@
                 formulario.get('cidade').getError('minlength')
     ">
   } @else {
-    <input type="button" value="Alterar" class="btn btn-primary"
+    <input type="button" value="Alterar" (click)="alterar()" class="btn btn-primary"
     [disabled]="formulario.get('nome').getError('required') || 
                 formulario.get('nome').getError('minlength') ||
 
@@ -108,7 +108,7 @@
       <td>{{v.nome}}</td>
       <td>{{v.idade}}</td>
       <td>{{v.cidade}}</td>
-      <td><button class="btn btn-primary">Selecionar</button></td>
+      <td><button class="btn btn-primary" (click)="selecionar(i)">Selecionar</button></td>
     </tr>
   </tbody>
 
