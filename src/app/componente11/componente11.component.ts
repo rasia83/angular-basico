@@ -55,4 +55,20 @@ export class Componente11Component {
 
   }
 
+  remover() {
+
+    this.vetor.splice(this.indice,1); // posição , quantidade 
+
+    this.formulario.reset();
+
+    this.btnCadastrar = true;
+  }
+
+  cancelar() {
+
+    this.formulario.reset();
+
+    this.btnCadastrar = true;
+  }
+
 }
